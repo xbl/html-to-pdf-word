@@ -12,7 +12,7 @@
             o\:* {behavior:url(#default#VML);}
             w\:* {behavior:url(#default#VML);}
             .shape {behavior:url(#default#VML);}
-            </style>
+        </style>
         <style>
             /* 页面样式，不设置会影响 page-break-after: always; 分页*/
             @page
@@ -20,14 +20,14 @@
                 mso-page-orientation: landscape;
                 size:20.99cm 20.7cm;    /* word 中 A4 纸 */
             }
-            @page Section1 {
+            @page Section {
                 mso-header-margin:.5in;
                 mso-footer-margin:.5in;
                 mso-header: h1;
                 mso-footer: f1;
             }
-            div.Section1 { page:Section1; }
-            table#hrdftrtbl
+            div.Section { page:Section; }
+            #hrdftrtbl
             {
                 margin:0in 0in 0in 900in;
                 width:1px;
@@ -61,8 +61,8 @@
             <script src="../scripts/echarts.min.js"></script>
         </head>
         <body>
-            <div class="Section1">
-                <div class="header"
+            <div class="Section">
+                <div
                     style="background:#640000;border-collapse:collapse;border-bottom: burlywood solid 3px;">
                     <p>这里是header！| </p>
                 </div>
@@ -260,19 +260,20 @@
             </div>
 
             <!-- word header footer begin -->
-            <div style='mso-element:header' id=h1>
-                <p class=headerFooter>
-                    Header content goes here
-                </p>
-            </div>
-            <div style='mso-element:footer' id=f1>
-                <p class=headerFooter>
-                    Page
-                    <span style='mso-field-code:PAGE'></span>
-                    of
-                    <span style='mso-field-code:NUMPAGES'></span>
-                </p>
-            </div>
+            <table id='hrdftrtbl' border='0' cellspacing='0' cellpadding='0'>
+                <tr><td>
+                <div style='mso-element:header' id=h1>
+                    <p class=headerFooter>
+                        Header content goes here
+                    </p>
+                </div>
+                <div style='mso-element:footer' id=f1>
+                    <p class=headerFooter>
+                        HTML to word footer
+                    </p>
+                </div>
+                </td></tr>
+            </table>
             <!-- word header footer end -->
 
             <script>

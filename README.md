@@ -58,7 +58,7 @@ Footer 变量
 
 * 生成的 word 需要另存为 `.docx`再编辑，否则会弹出各种提示且无法保存。
 
-html 设置页眉、页脚尚未成功，参考：
+html 设置页眉、页脚，参考：
 https://stackoverflow.com/questions/13340216/html-generated-microsoft-word-document-with-header-footer-and-watermark
 
 #### 当前进展
