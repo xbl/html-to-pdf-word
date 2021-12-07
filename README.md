@@ -21,6 +21,14 @@ npm start
 
 Demo 中的代码使用 [puppeteer](https://www.npmjs.com/package/puppeteer) 无头浏览器渲染 `template/template.html` ，将渲染出来的HTML 导出PDF，导出效果与在网页中打印预览的效果基本相同。值得注意的是部分样式可能在PDF 中不生效需要增加 `-webkit-print-color-adjust: exact;` 。
 
+使用👇🏻样式可以实现分页
+
+```css
+page-break-after: always;
+```
+
+
+
 #### 转 Word
 
 Html 转 word 几乎没有找到合适的第三方库，尝试 [html-to-docx](https://www.npmjs.com/package/html-to-docx) 库，在设置背景色和其他样式上格式会乱。
@@ -30,6 +38,19 @@ Html 转 word 几乎没有找到合适的第三方库，尝试 [html-to-docx](ht
 https://www.codexworld.com/export-html-to-word-doc-docx-using-javascript/
 
 设置 HTML 的 `xmlns` 将文件保存成 `.doc` 即可。
+
+Footer 变量
+
+```html
+<p class=headerFooter>
+  Page
+  <span style='mso-field-code:PAGE'></span>
+  of
+  <span style='mso-field-code:NUMPAGES'></span>
+</p>
+```
+
+`mso-field-code:PAGE` 当前页数，`mso-field-code:NUMPAGES` 总页数。
 
 ##### 缺点
 
@@ -44,7 +65,7 @@ https://stackoverflow.com/questions/13340216/html-generated-microsoft-word-docum
 
 - [x] Html 转 PDF
 - [x] Html 转 Doc
-- [ ] Word 设置 Header、Footer
+- [x] Word 设置 Header、Footer
 - [ ] PDF 设置 Header、Footer
 - [ ] Html 转 Doc 后编辑无需另存为 Word
 
