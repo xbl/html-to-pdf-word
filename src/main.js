@@ -1,6 +1,6 @@
 const fs = require('fs').promises;
-const puppeteer = require('puppeteer');
 const path = require('path');
+const puppeteer = require('puppeteer');
 
 (async () => {
   const targetName = 'output';
@@ -11,5 +11,6 @@ const path = require('path');
   const html = await page.content()
   await browser.close();
 
+  // to word
   await fs.writeFile(path.resolve(__dirname, `../${targetName}.doc`), html, 'utf8' );
 })();
