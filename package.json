@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "template": "parcel template/template.html",
-    "html": "mammoth src.docx output.html"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +15,6 @@
     "html-pdf": "^3.0.1",
     "html-to-docx": "^1.2.4",
     "jsdom": "^18.1.1",
-    "mammoth": "^1.4.19",
     "prince": "^1.9.5",
     "puppeteer": "^12.0.1"
   },
