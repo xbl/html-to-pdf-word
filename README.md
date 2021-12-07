@@ -66,6 +66,7 @@ https://stackoverflow.com/questions/13340216/html-generated-microsoft-word-docum
 - [x] Html 转 PDF
 - [x] Html 转 Doc
 - [x] Word 设置 Header、Footer
+- [ ] Word 显示 base64 图片有点问题...
 - [ ] PDF 设置 Header、Footer
 - [ ] Html 转 Doc 后编辑无需另存为 Word
 
